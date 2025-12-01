@@ -1,0 +1,15 @@
+
+version: "3.9"
+
+services:
+  lor-ent-bot:
+    build: .
+    container_name: lor-ent-bot
+    env_file:
+      - .env
+    volumes:
+      - botdata:/app
+    restart: unless-stopped
+
+volumes:
+  botdata:
