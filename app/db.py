@@ -1,8 +1,11 @@
 import json
+import os
 import aiosqlite
 from typing import Tuple, List, Dict, Any, Optional
 
-DB_PATH = "bot.db"
+# Use /data for persistent volume on Northflank, fallback to current directory
+_data_dir = os.getenv("DATA_DIR", ".")
+DB_PATH = os.getenv("DB_PATH", os.path.join(_data_dir, "bot.db"))
 
 DRAFT_PK_COL = "dentist_tg_id"
 CONS_PK_COL  = "dentist_tg_id"

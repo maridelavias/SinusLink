@@ -12,6 +12,8 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app ./app
-COPY .env ./.env
+
+# Create data directory for persistent storage
+RUN mkdir -p /data
 
 CMD ["python", "-m", "app.bot"]

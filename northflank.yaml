@@ -1,0 +1,22 @@
+serviceType: deployment
+id: sinuslink-bot
+deployment:
+  instances: 1
+  docker:
+    configType: default
+  storage:
+    ephemeralStorage:
+      storageSize: 16384
+  volumes:
+    - name: bot-data
+      containerMountPath: /data
+      size: 1024  # 1GB for database
+runtimeEnvironment:
+  # Set these in Northflank UI or via secrets:
+  # BOT_TOKEN: your-telegram-bot-token
+  # LOR_TARGET_CHAT_ID: your-target-chat-id
+  # MAX_ZIP_MB: 47
+  # DATA_DIR: /data
+  DATA_DIR: /data
+  PYTHONDONTWRITEBYTECODE: "1"
+  PYTHONUNBUFFERED: "1"

@@ -1,0 +1,17 @@
+.env
+.env.*
+*.db
+*.db-journal
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.git/
+.gitignore
+.dockerignore
+docker-compose.yml
+NORTHFLANK_DEPLOY.md
+northflank.yaml
+*.md
+.DS_Store
