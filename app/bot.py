@@ -459,7 +459,7 @@ async def safe_post_init(application):
     )
 
     await safe_call(
-        application.bot.set_my_short_description("Бот для быстрой связи между стоматологом-хирургом и хирургом-отоларингологом для планирования совместного лечения пациента."),
+        application.bot.set_my_short_description("Связь стоматолога и ЛОРа для планирования совместного лечения пациента."),
         "set_my_short_description",
     )
 
